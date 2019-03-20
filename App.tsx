@@ -13,6 +13,15 @@ import RNKakaoLogins from "react-native-kakao-logins";
 import { NaverLogin, getProfile } from 'react-native-naver-login';
 import NativeButton from "apsl-react-native-button";
 
+const initials = {
+  kConsumerKey: '5adf_RWqoWSbmNEIQ4PO',
+  kConsumerSecret: '0bqy7oZShp',
+  kServiceAppName: 'myawesomeproject',
+  kServiceAppUrlScheme: '', // only for iOS
+};
+
+
+
 export default class App extends Component<any, any> {
   constructor(props: any) {
     super(props);
@@ -24,6 +33,7 @@ export default class App extends Component<any, any> {
       console.log("Not Linked");
     }
   }
+  
 
   // 카카오 로그인 시작.
   kakaoLogin() {
@@ -52,13 +62,15 @@ export default class App extends Component<any, any> {
 
   // 로그인 후 내 프로필 가져오기.
   getProfile() {
-    console.log("getKakaoProfile");
-    RNKakaoLogins.getProfile((err: any, result: any) => {
+    console.log("naver login");
+
+    console.log(initials);
+    NaverLogin.login(initials, (err: any, token: any) => {
       if (err) {
         console.log("error", err);
         return;
       }
-      console.log("result", result);
+      console.log("result", token);
     });
   }
 
