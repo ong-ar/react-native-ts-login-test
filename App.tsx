@@ -30,10 +30,11 @@ export default class App extends Component<any, any> {
     RNKakaoLogins.login((err: any, result: any) => {
       console.log(err, result);
       if (err) {
-        Alert.alert("error", err);
+        console.log("error", err);
         return;
       }
-      Alert.alert("result", result);
+      this.setState({token: result.token});
+      Alert.alert("result", result.token);
     });
   }
 
@@ -53,10 +54,10 @@ export default class App extends Component<any, any> {
     console.log("getKakaoProfile");
     RNKakaoLogins.getProfile((err: any, result: any) => {
       if (err) {
-        Alert.alert("error", err);
+        console.log("error", err);
         return;
       }
-      Alert.alert("result", result);
+      console.log("result", result);
     });
   }
 
