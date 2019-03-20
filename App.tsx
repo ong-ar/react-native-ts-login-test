@@ -10,7 +10,8 @@ import {
 
 // const { RNKakaoLogins } = NativeModules;
 import RNKakaoLogins from "react-native-kakao-logins";
-const NativeButton = require("apsl-react-native-button");
+import { NaverLogin, getProfile } from 'react-native-naver-login';
+import NativeButton from "apsl-react-native-button";
 
 export default class App extends Component<any, any> {
   constructor(props: any) {
