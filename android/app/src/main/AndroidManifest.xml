@@ -21,6 +21,8 @@
         </intent-filter>
       </activity>
       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+      <meta-data android:name="com.naver.sdk.ClientId" android:value="5adf_RWqoWSbmNEIQ4PO"/> 
+      <meta-data android:name="com.naver.sdk.ClientSecret" android:value="0bqy7oZShp" /> 
     </application>
 
 </manifest>

@@ -40,7 +40,7 @@
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
 		B4C55721322241DB931AFE2B /* libRNKakaoLogins.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 919D845C004043F2ABB00F36 /* libRNKakaoLogins.a */; };
-		0ABCF3EFCD8F4ABBAD187E66 /* libRNNaverLogin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59DA880B0A6B487A8EF8C746 /* libRNNaverLogin.a */; };
+		3CFAFAEA292D431389661716 /* libRNCNaverLogin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C404812D73E04141BD7D0375 /* libRNCNaverLogin.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -350,8 +350,8 @@
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		13903D7E6CA2480D9F43E2E4 /* RNKakaoLogins.xcodeproj */ = {isa = PBXFileReference; name = "RNKakaoLogins.xcodeproj"; path = "../node_modules/react-native-kakao-logins/ios/RNKakaoLogins.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		919D845C004043F2ABB00F36 /* libRNKakaoLogins.a */ = {isa = PBXFileReference; name = "libRNKakaoLogins.a"; path = "libRNKakaoLogins.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		1B55A2D7B0424268BCBB53CA /* RNNaverLogin.xcodeproj */ = {isa = PBXFileReference; name = "RNNaverLogin.xcodeproj"; path = "../node_modules/react-native-naver-login/ios/RNNaverLogin.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		59DA880B0A6B487A8EF8C746 /* libRNNaverLogin.a */ = {isa = PBXFileReference; name = "libRNNaverLogin.a"; path = "libRNNaverLogin.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		3771742BDA6C4D0D8B70F8B9 /* RNCNaverLogin.xcodeproj */ = {isa = PBXFileReference; name = "RNCNaverLogin.xcodeproj"; path = "../node_modules/react-native-ccs-naver-login/ios/RNCNaverLogin.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		C404812D73E04141BD7D0375 /* libRNCNaverLogin.a */ = {isa = PBXFileReference; name = "libRNCNaverLogin.a"; path = "libRNCNaverLogin.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -381,7 +381,7 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				B4C55721322241DB931AFE2B /* libRNKakaoLogins.a in Frameworks */,
-				0ABCF3EFCD8F4ABBAD187E66 /* libRNNaverLogin.a in Frameworks */,
+				3CFAFAEA292D431389661716 /* libRNCNaverLogin.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,7 +572,7 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				13903D7E6CA2480D9F43E2E4 /* RNKakaoLogins.xcodeproj */,
-				1B55A2D7B0424268BCBB53CA /* RNNaverLogin.xcodeproj */,
+				3771742BDA6C4D0D8B70F8B9 /* RNCNaverLogin.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1200,13 +1200,11 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyAwesomeProject.app/MyAwesomeProject";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-kakao-logins/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-naver-login/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-ccs-naver-login/ios",
 				);
 			};
 			name = Debug;
@@ -1228,13 +1226,11 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyAwesomeProject.app/MyAwesomeProject";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-kakao-logins/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-naver-login/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-ccs-naver-login/ios",
 				);
 			};
 			name = Release;
@@ -1258,7 +1254,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-kakao-logins/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-naver-login/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-ccs-naver-login/ios",
 				);
 			};
 			name = Debug;
@@ -1281,7 +1277,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-kakao-logins/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-naver-login/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-ccs-naver-login/ios",
 				);
 			};
 			name = Release;
@@ -1311,13 +1307,11 @@
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-kakao-logins/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-naver-login/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-ccs-naver-login/ios",
 				);
 			};
 			name = Debug;
@@ -1347,13 +1341,11 @@
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-kakao-logins/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-naver-login/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-ccs-naver-login/ios",
 				);
 			};
 			name = Release;
@@ -1382,13 +1374,11 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-kakao-logins/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-naver-login/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-ccs-naver-login/ios",
 				);
 			};
 			name = Debug;
@@ -1417,13 +1407,11 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-kakao-logins/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-naver-login/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-ccs-naver-login/ios",
 				);
 			};
 			name = Release;

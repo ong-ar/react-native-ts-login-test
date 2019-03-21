@@ -10,7 +10,7 @@ import {
 
 // const { RNKakaoLogins } = NativeModules;
 import RNKakaoLogins from "react-native-kakao-logins";
-import { NaverLogin, getProfile } from 'react-native-naver-login';
+import NaverLogin from 'react-native-ccs-naver-login';
 import NativeButton from "apsl-react-native-button";
 
 const initials = {
@@ -19,6 +19,7 @@ const initials = {
   kServiceAppName: 'myawesomeproject',
   kServiceAppUrlScheme: '', // only for iOS
 };
+
 
 
 
@@ -61,17 +62,13 @@ export default class App extends Component<any, any> {
   }
 
   // 로그인 후 내 프로필 가져오기.
-  getProfile() {
-    console.log("naver login");
-
-    console.log(initials);
-    NaverLogin.login(initials, (err: any, token: any) => {
-      if (err) {
-        console.log("error", err);
-        return;
-      }
-      console.log("result", token);
-    });
+  // 네이버 로그인 시작.
+  async naverLogin() {
+    console.log('  naverLoginStart  ed');
+    NaverLogin.login().then(res => {
+      this.setState({token: res.accessToken})
+      console.log(res);
+    }).catch(e => console.log(e));
   }
 
   render() {
@@ -101,12 +98,12 @@ export default class App extends Component<any, any> {
           </NativeButton>
           <NativeButton
             isLoading={this.state.isKakaoLogging}
-            onPress={() => this.getProfile()}
+            onPress={() => this.naverLogin()}
             activeOpacity={0.5}
             style={styles.btnKakaoLogin}
             textStyle={styles.txtNaverLogin}
           >
-            getProfile
+            Naver Login
           </NativeButton>
         </View>
       </View>
