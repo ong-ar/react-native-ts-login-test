@@ -149,6 +149,7 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-fbsdk')
     implementation project(':react-native-ccs-naver-login')
     implementation project(':react-native-kakao-logins')
     implementation fileTree(dir: "libs", include: ["*.jar"])

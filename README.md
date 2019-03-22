@@ -30,3 +30,8 @@ keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore -
 
 - release keystore 생성
   https://facebook.github.io/react-native/docs/signed-apk-android
+
+- license 문제 시
+```
+$ sdkmanager --licenses
+```
