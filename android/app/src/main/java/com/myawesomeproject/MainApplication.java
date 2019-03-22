@@ -3,7 +3,10 @@ package com.myawesomeproject;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookSdk;
 import com.facebook.reactnative.androidsdk.FBSDKPackage;
+import com.facebook.appevents.AppEventsLogger;
 import cc.creamcookie.rn.naver.login.RNCNaverLoginPackage;
 import com.dooboolab.kakaologins.RNKakaoLoginsPackage;
 import com.facebook.react.ReactNativeHost;
@@ -30,12 +33,8 @@ public class MainApplication extends Application implements ReactApplication {
 
     @Override
     protected List<ReactPackage> getPackages() {
-      return Arrays.<ReactPackage>asList(
-          new MainReactPackage(),
-            new FBSDKPackage(mCallbackManager),
-            new RNCNaverLoginPackage(),
-            new RNKakaoLoginsPackage()
-      );
+      return Arrays.<ReactPackage>asList(new MainReactPackage(), new FBSDKPackage(mCallbackManager),
+          new RNCNaverLoginPackage(), new RNKakaoLoginsPackage());
     }
 
     @Override
@@ -52,7 +51,7 @@ public class MainApplication extends Application implements ReactApplication {
   @Override
   public void onCreate() {
     super.onCreate();
-    SoLoader.init(this, /* native exopackage */ false);
     AppEventsLogger.activateApp(this);
+    SoLoader.init(this, /* native exopackage */ false);
   }
 }

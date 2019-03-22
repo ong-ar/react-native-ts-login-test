@@ -10,18 +10,9 @@ import {
 
 // const { RNKakaoLogins } = NativeModules;
 import RNKakaoLogins from "react-native-kakao-logins";
-import NaverLogin from 'react-native-ccs-naver-login';
+import NaverLogin from "react-native-ccs-naver-login";
 import NativeButton from "apsl-react-native-button";
-
-const initials = {
-  kConsumerKey: '5adf_RWqoWSbmNEIQ4PO',
-  kConsumerSecret: '0bqy7oZShp',
-  kServiceAppName: 'myawesomeproject',
-  kServiceAppUrlScheme: '', // only for iOS
-};
-
-
-
+import { LoginButton, AccessToken } from "react-native-fbsdk";
 
 export default class App extends Component<any, any> {
   constructor(props: any) {
@@ -34,7 +25,6 @@ export default class App extends Component<any, any> {
       console.log("Not Linked");
     }
   }
-  
 
   // 카카오 로그인 시작.
   kakaoLogin() {
@@ -45,7 +35,7 @@ export default class App extends Component<any, any> {
         console.log("error", err);
         return;
       }
-      this.setState({token: result.token});
+      this.setState({ token: result.token });
       Alert.alert("result", result.token);
     });
   }
@@ -64,11 +54,13 @@ export default class App extends Component<any, any> {
   // 로그인 후 내 프로필 가져오기.
   // 네이버 로그인 시작.
   async naverLogin() {
-    console.log('  naverLoginStart  ed');
-    NaverLogin.login().then(res => {
-      this.setState({token: res.accessToken})
-      console.log(res);
-    }).catch(e => console.log(e));
+    console.log("  naverLoginStart  ed");
+    NaverLogin.login()
+      .then(res => {
+        this.setState({ token: res.accessToken });
+        console.log(res);
+      })
+      .catch(e => console.log(e));
   }
 
   render() {
@@ -105,6 +97,20 @@ export default class App extends Component<any, any> {
           >
             Naver Login
           </NativeButton>
+          <LoginButton
+            onLoginFinished={(error, result) => {
+              if (error) {
+                console.log("login has error: " + result.error);
+              } else if (result.isCancelled) {
+                console.log("login is cancelled.");
+              } else {
+                AccessToken.getCurrentAccessToken().then(data => {
+                  console.log(data.accessToken.toString());
+                });
+              }
+            }}
+            onLogoutFinished={() => console.log("logout.")}
+          />
         </View>
       </View>
     );
