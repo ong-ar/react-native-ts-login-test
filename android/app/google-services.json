@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1060901720488",
+    "firebase_url": "https://imposing-sentry-694.firebaseio.com",
+    "project_id": "imposing-sentry-694",
+    "storage_bucket": "imposing-sentry-694.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060901720488:android:fb3a7a430f02545a",
+        "android_client_info": {
+          "package_name": "com.myawesomeproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1060901720488-1cu43r5kk02p9gd5rbovhlnmk0k0nvln.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.myawesomeproject",
+            "certificate_hash": "40335ae083bfd6e8b4b298bfc97ffa55daa76132"
+          }
+        },
+        {
+          "client_id": "1060901720488-52mb7d0n2ec2p2s2q7f3jsf6v5bu38vj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdUNkHoqezsWGj67xnIryhdlzWdnVRdxI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1060901720488-52mb7d0n2ec2p2s2q7f3jsf6v5bu38vj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
