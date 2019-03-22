@@ -42,6 +42,7 @@
 		B4C55721322241DB931AFE2B /* libRNKakaoLogins.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 919D845C004043F2ABB00F36 /* libRNKakaoLogins.a */; };
 		3CFAFAEA292D431389661716 /* libRNCNaverLogin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C404812D73E04141BD7D0375 /* libRNCNaverLogin.a */; };
 		7CA971BF8C1549C5AF8686A8 /* libRCTFBSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E174B7F530BC43BCA863334B /* libRCTFBSDK.a */; };
+		69A7372E2FCC4E02815FEB32 /* libRNGoogleSignin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D8D747EDF994AE59B125174 /* libRNGoogleSignin.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -355,6 +356,8 @@
 		C404812D73E04141BD7D0375 /* libRNCNaverLogin.a */ = {isa = PBXFileReference; name = "libRNCNaverLogin.a"; path = "libRNCNaverLogin.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		FC4D21EE4C2C4AFB98677CF9 /* RCTFBSDK.xcodeproj */ = {isa = PBXFileReference; name = "RCTFBSDK.xcodeproj"; path = "../node_modules/react-native-fbsdk/ios/RCTFBSDK.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		E174B7F530BC43BCA863334B /* libRCTFBSDK.a */ = {isa = PBXFileReference; name = "libRCTFBSDK.a"; path = "libRCTFBSDK.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		0735D3BA392941A18082D98F /* RNGoogleSignin.xcodeproj */ = {isa = PBXFileReference; name = "RNGoogleSignin.xcodeproj"; path = "../node_modules/react-native-google-signin/ios/RNGoogleSignin.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		9D8D747EDF994AE59B125174 /* libRNGoogleSignin.a */ = {isa = PBXFileReference; name = "libRNGoogleSignin.a"; path = "libRNGoogleSignin.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -386,6 +389,7 @@
 				B4C55721322241DB931AFE2B /* libRNKakaoLogins.a in Frameworks */,
 				3CFAFAEA292D431389661716 /* libRNCNaverLogin.a in Frameworks */,
 				7CA971BF8C1549C5AF8686A8 /* libRCTFBSDK.a in Frameworks */,
+				69A7372E2FCC4E02815FEB32 /* libRNGoogleSignin.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,6 +582,7 @@
 				13903D7E6CA2480D9F43E2E4 /* RNKakaoLogins.xcodeproj */,
 				3771742BDA6C4D0D8B70F8B9 /* RNCNaverLogin.xcodeproj */,
 				FC4D21EE4C2C4AFB98677CF9 /* RCTFBSDK.xcodeproj */,
+				0735D3BA392941A18082D98F /* RNGoogleSignin.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1206,12 +1211,14 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-kakao-logins/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-ccs-naver-login/ios",
 					"$(SRCROOT)/../node_modules/react-native-fbsdk/ios/RCTFBSDK/**",
+					"$(SRCROOT)/../node_modules/react-native-google-signin/ios/RNGoogleSignin",
 				);
 			};
 			name = Debug;
@@ -1234,12 +1241,14 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-kakao-logins/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-ccs-naver-login/ios",
 					"$(SRCROOT)/../node_modules/react-native-fbsdk/ios/RCTFBSDK/**",
+					"$(SRCROOT)/../node_modules/react-native-google-signin/ios/RNGoogleSignin",
 				);
 			};
 			name = Release;
@@ -1265,6 +1274,7 @@
 					"$(SRCROOT)/../node_modules/react-native-kakao-logins/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-ccs-naver-login/ios",
 					"$(SRCROOT)/../node_modules/react-native-fbsdk/ios/RCTFBSDK/**",
+					"$(SRCROOT)/../node_modules/react-native-google-signin/ios/RNGoogleSignin",
 				);
 			};
 			name = Debug;
@@ -1289,6 +1299,7 @@
 					"$(SRCROOT)/../node_modules/react-native-kakao-logins/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-ccs-naver-login/ios",
 					"$(SRCROOT)/../node_modules/react-native-fbsdk/ios/RCTFBSDK/**",
+					"$(SRCROOT)/../node_modules/react-native-google-signin/ios/RNGoogleSignin",
 				);
 			};
 			name = Release;
@@ -1319,12 +1330,14 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-kakao-logins/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-ccs-naver-login/ios",
 					"$(SRCROOT)/../node_modules/react-native-fbsdk/ios/RCTFBSDK/**",
+					"$(SRCROOT)/../node_modules/react-native-google-signin/ios/RNGoogleSignin",
 				);
 			};
 			name = Debug;
@@ -1355,12 +1368,14 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-kakao-logins/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-ccs-naver-login/ios",
 					"$(SRCROOT)/../node_modules/react-native-fbsdk/ios/RCTFBSDK/**",
+					"$(SRCROOT)/../node_modules/react-native-google-signin/ios/RNGoogleSignin",
 				);
 			};
 			name = Release;
@@ -1390,12 +1405,14 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-kakao-logins/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-ccs-naver-login/ios",
 					"$(SRCROOT)/../node_modules/react-native-fbsdk/ios/RCTFBSDK/**",
+					"$(SRCROOT)/../node_modules/react-native-google-signin/ios/RNGoogleSignin",
 				);
 			};
 			name = Debug;
@@ -1425,12 +1442,14 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-kakao-logins/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-ccs-naver-login/ios",
 					"$(SRCROOT)/../node_modules/react-native-fbsdk/ios/RCTFBSDK/**",
+					"$(SRCROOT)/../node_modules/react-native-google-signin/ios/RNGoogleSignin",
 				);
 			};
 			name = Release;
