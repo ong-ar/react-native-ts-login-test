@@ -156,6 +156,7 @@ dependencies {
     implementation project(':react-native-kakao-logins')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
+    implementation "com.google.android.gms:play-services-auth:${rootProject.ext.googlePlayServicesAuthVersion}"
     implementation "com.facebook.react:react-native:+"  // From node_modules
 }
 
